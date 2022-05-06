@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <script>
+        function somar () {
+            alert ('eu vou somar')
+
+            res.value = parseInt (v1.value) + parseInt (v2.value)
+        }
+        function subtrair() {
+            alert ('eu vou subtrair')
+
+            res.value = parseInt (v1.value) - parseInt (v2.value)
+        }
+        function multiplicar() {
+            alert ('eu vou multiplicar')
+
+            res.value = parseInt (v1.value) * parseInt (v2.value)
+        }
+        function dividir() {
+            alert ('eu vou dividir')
+
+            res.value = parseInt (v1.value) / parseInt (v2.value)
+        }
+    </script>
+
+    <h1>Calculadora Simples</h1>
+    Valor1: <input type="text" id="v1" value="0" ><br>
+    Valor2: <input type="text" id="v2" value="0" ><br>
+    <input type="button" value="somar" onclick="somar()">
+    <input type="button" value="subtrair" onclick="subtrair()">
+    <input type="button" value="multiplicar" onclick="multiplicar()">
+    <input type="button" value="dividir" onclick="dividir()"><br>
+    Resultado: <input type="text" id="res" value="0" readonly><br>
+</body>
+</html>
