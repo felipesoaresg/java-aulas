@@ -23,3 +23,52 @@
     Preço Total: <input type="text" id="res" value="" readonly><br>
 </body>
 </html>
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+<body>
+    <script>
+
+        function Calcular() {
+            res.value = parseInt (v3.value) * parseInt (v2.value)
+        }
+
+        function Salvar() {
+            var tdDescrição = par.children("td:nth-child(1)");
+            var tdQuantidade = par.children("td:nth-child(2)");
+            var tdPreço = par.children("td:nth-child(3)");
+ 
+            tdDescrição.html(tdDescrição.children("input[type=text]").val());
+            tdQuantidade.html(tdQuantidade.children("input[type=text]").val());
+            tdPreço.html(tdPreço.children("input[type=text]").val());
+        }
+
+    </script>
+
+    <h1>Produtos</h1>
+    Descrição: <input type="text" id="v1" value="" ><br>
+    Quantidade: <input type="text" id="v2" value="" ><br>
+    Preço Unitário: <input type="text" id="v3" value="" ><br>
+    <input type="button" value="Calcular" onclick="Calcular()">
+    <input type="button" value="Salvar" onclick="Salvar()"><br>
+    Preço Total: <input type="text" id="res" value="" readonly><br>
+    <br>
+    <table id="tbl" border="1">
+        <tr>
+          <td>Descrição</td>
+          <td>Quantidade</td>
+          <td>Preço</td>
+        </tr>
+        </table>    
+</body>
+</html>
