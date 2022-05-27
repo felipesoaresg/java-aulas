@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td{
+            padding: 10px 20px;
+            border: 1px solid #000;
+        }
+    </style>
+
+</head>
+
+<body id="body",>
+    <h2>Produtos</h2>
+    <p>Nome:
+    <input type="text" name="lol" id="nome">
+    <br>
+    <p>Quantidade:
+    <input type="number" name="ta" id="quanti">
+    <br>
+    <p>Preço unitário:
+    <input type="number" name="ok" id="unidade">
+    <br></p>
+    <button id="69" onclick="calcular()">calcular</button>
+    <button id="96" onclick="salvar()">salvar</button>
+    <br>
+    <p>Valor Total:
+    <p id="valor"></p>
+
+    <script>
+        let total;
+
+function calcular(){
+    let quantidade = document.querySelector('#quanti').value;
+    let unidade = document.querySelector('#unidade').value;
+    total = quantidade * unidade;
+    let ba = document.querySelector('#valor').textContent = '' + total;
+
+}
+
+function salvar(){
+    let nome = document.querySelector('#nome').value;
+    let quantidade = document.querySelector('#quanti').value;
+    let unidade = document.querySelector('#unidade').value;
+let row_2 = document.createElement('tr');
+let row_2_data_1 = document.createElement('td');
+row_2_data_1.innerHTML = "" + nome;
+let row_2_data_2 = document.createElement('td');
+row_2_data_2.innerHTML = "" + quantidade;
+let row_2_data_3 = document.createElement('td');
+row_2_data_3.innerHTML = "" + unidade;
+row_2.appendChild(row_2_data_1);
+row_2.appendChild(row_2_data_2);
+row_2.appendChild(row_2_data_3);
+tbody.appendChild(row_2);
+}
+let table = document.createElement('table');
+let thead = document.createElement('thead');
+let tbody = document.createElement('tbody');
+
+table.appendChild(thead);
+table.appendChild(tbody);
+
+document.getElementById('body').appendChild(table);
+let row_1 = document.createElement('tr');
+let heading_1 = document.createElement('th');
+heading_1.innerHTML = "Nome";
+let heading_2 = document.createElement('th');
+heading_2.innerHTML = "Quantidade";
+let heading_3 = document.createElement('th');
+heading_3.innerHTML = "Valor Unitário";
+
+row_1.appendChild(heading_1);
+row_1.appendChild(heading_2);
+row_1.appendChild(heading_3);
+thead.appendChild(row_1);
+    </script>  
+</body>
+</html>
