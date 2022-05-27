@@ -1,0 +1,54 @@
+const pessoa = {
+nome: 'Felipe',
+idade: 17,
+peso: 64,
+altura: 1.7,
+anoNascimento: 2005,
+};
+
+const pessoa2 = {
+    nome: 'Lais',
+    idade: 18,
+    peso: 55,
+    altura: 1.6,
+    anoNascimento: 2004,
+    };
+
+const produto = {
+    id: 234,
+    nome: 'OMO',
+    quantidade: 5,
+    valor: 9.00,
+    valortotal: function () {
+        return this.quantidade * this.valor
+    },
+};
+
+const aluno = {
+    aluno: 'Lucas',
+    idade: 15,
+    série: '1° A',
+    datadenasc: '23/03/2004',
+    responsavel: {
+        pai: 'José Soares',
+        idadedopai: 46,
+        mãe: 'Larissa Souza',
+        idadedamãe: 40, 
+    },
+};
+
+const escola = {
+    escola: 'Barcala',
+    periodo: 'Integral',
+};
+
+const professor = {
+    nome: 'Diva',
+    idade: 50,
+    disciplina: 'Português',
+};
+
+console.log(pessoa.nome);
+console.log(produto.nome);
+console.log(aluno.responsavel);
+/* const var e let é atribuir*/
